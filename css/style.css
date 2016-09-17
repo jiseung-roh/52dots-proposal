@@ -251,10 +251,16 @@ html {
 }
 
 .slide-2 {
+<<<<<<< HEAD
   position: relative;
   background-image: url(../asset/bg-image.jpg);
   background-position: center center;
   background-size: cover;
+=======
+  background-image: url(../asset/bg-image.jpg);
+  background-size: cover;
+  background-position: center center;
+>>>>>>> master
 }
 
 .slogan {
@@ -296,11 +302,64 @@ html {
   border-radius: 50%;
 }
 
+.project-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.project-table tr {
+  text-align: center;
+  background-color: #f8fafb;
+  width: 33.3333333333%;
+  vertical-align: middle;
+  font-size: 12px;
+}
+
+@media screen and (min-width: 1px) and (max-width: 650px) {
+  .project-table tr {
+    font-size: 11px;
+  }
+}
+
+.project-table thead > tr {
+  border-bottom: 1px dotted #999;
+}
+
+.project-table td, .project-table th {
+  padding: .5em;
+  border-right: 1px dotted #999;
+}
+
+.project-table .hl-table {
+  background-color: #2ecc71;
+  color: #fff;
+  animation: blinking 1s infinite alternate;
+}
+
+@keyframes blinking {
+  0% {
+    background-color: #2ecc71;
+  }
+  100% {
+    background-color: rgba(46, 204, 113, 0.5);
+  }
+}
+
+.project-table + p {
+  margin-top: 1rem;
+}
+
 .schedule-title {
   position: relative;
   padding-left: 6px;
   margin-bottom: 0.875em;
   font-size: 12px;
+}
+
+@media screen and (min-width: 1px) and (max-width: 650px) {
+  .schedule-title {
+    font-size: 11px;
+  }
 }
 
 .schedule-title::before {
