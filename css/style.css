@@ -34,6 +34,12 @@ html {
   left: 0;
 }
 
+@media screen and (min-width: 1px) and (max-width: 650px) {
+  .pg-header {
+    display: none;
+  }
+}
+
 .tags {
   width: 100%;
   height: 42px;
@@ -68,13 +74,24 @@ html {
   position: fixed;
   z-index: 200;
   right: 2.5rem;
-  top: 50%;
   width: 2rem;
   height: 2rem;
-  margin-top: -35px;
   background-image: url(../asset/arrow.svg);
   background-size: contain;
   background-position: center;
+}
+
+@media screen and (min-width: 651px) {
+  .fp-controlArrow {
+    top: 50%;
+    margin-top: -35px;
+  }
+}
+
+@media screen and (min-width: 1px) and (max-width: 650px) {
+  .fp-controlArrow {
+    top: 2.5rem;
+  }
 }
 
 .fp-controlArrow:hover {
@@ -228,28 +245,15 @@ html {
   }
 }
 
-.slide-1 {
-  background-image: url(../asset/mockup-1.jpg);
-  background-size: cover;
-  background-position: center center;
-}
-
 .brand {
   font-size: 48px;
   font-weight: 100;
 }
 
 .slide-2 {
-  position: relative;
-}
-
-.video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  height: auto;
-  transform: translate(-50%, -50%);
+  background-image: url(../asset/bg-image.jpg);
+  background-size: cover;
+  background-position: center center;
 }
 
 .slogan {
@@ -291,11 +295,64 @@ html {
   border-radius: 50%;
 }
 
+.project-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.project-table tr {
+  text-align: center;
+  background-color: #f8fafb;
+  width: 33.3333333333%;
+  vertical-align: middle;
+  font-size: 12px;
+}
+
+@media screen and (min-width: 1px) and (max-width: 650px) {
+  .project-table tr {
+    font-size: 11px;
+  }
+}
+
+.project-table thead > tr {
+  border-bottom: 1px dotted #999;
+}
+
+.project-table td, .project-table th {
+  padding: .5em;
+  border-right: 1px dotted #999;
+}
+
+.project-table .hl-table {
+  background-color: #2ecc71;
+  color: #fff;
+  animation: blinking 1s infinite alternate;
+}
+
+@keyframes blinking {
+  0% {
+    background-color: #2ecc71;
+  }
+  100% {
+    background-color: rgba(46, 204, 113, 0.5);
+  }
+}
+
+.project-table + p {
+  margin-top: 1rem;
+}
+
 .schedule-title {
   position: relative;
   padding-left: 6px;
   margin-bottom: 0.875em;
   font-size: 12px;
+}
+
+@media screen and (min-width: 1px) and (max-width: 650px) {
+  .schedule-title {
+    font-size: 11px;
+  }
 }
 
 .schedule-title::before {
@@ -384,3 +441,5 @@ html {
   height: 100px;
   border-radius: 50%;
 }
+
+/*# sourceMappingURL=../map/style.css.map */

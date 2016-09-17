@@ -80,12 +80,6 @@
 	position: relative
 	z-index: 100
 
-// slide-1
-.slide-1
-	background-image: url(../asset/mockup-1.jpg)
-	background-size: cover
-	background-position: center center
-
 .brand
 	font:
 		size: 48px
@@ -93,15 +87,9 @@
 
 // slide-2
 .slide-2
-	position: relative
-
-.video
-	position: absolute
-	top: 50%
-	left: 50%
-	width: 100%
-	height: auto
-	transform: translate(-50%, -50%)
+	background-image: url(../asset/bg-image.jpg)
+	background-size: cover
+	background-position: center center
 
 .slogan
 	font:
@@ -133,11 +121,44 @@
 	border-radius: 50%
 
 // slide-8
+.project-table
+	width: 100%
+	border-collapse: collapse
+	tr
+		text-align: center
+		background-color: $bg-color-gray
+		width: 33.3333333333%
+		vertical-align: middle
+		font-size: 12px
+		+responsive($xs-screen)
+			font-size: 11px
+	thead > tr
+		border-bottom: 1px dotted #999
+	td, th
+		padding: .5em
+		border-right: 1px dotted #999
+	.hl-table
+		background-color: $point-color-blue
+		color: $white
+		animation: blinking 1s infinite alternate
+		@keyframes blinking
+			0%
+				background-color: $point-color-blue
+			100%
+				background-color: rgba($point-color-blue, .5)
+	&+p
+		margin-top: 1rem
+
+
+
+// slide-9
 .schedule-title
 	position: relative
 	padding-left: 6px
 	margin-bottom: 0.875em
 	font-size: 12px
+	+responsive($xs-screen)
+		font-size: 11px
 	&::before
 		content: ''
 		position: absolute
